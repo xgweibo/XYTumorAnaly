@@ -1,0 +1,73 @@
+# NetBeans specific #
+nbproject/private/
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+target/
+nbactions.xml
+nb-configuration.xml
+!app/bower_components/bootstrap/dist/
+!app/bower_components/angular-websocket/dist/
+!app/bower_components/*/dist/
+!app/bower_components/angular-flowchart/
+
+# Class Files #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#
+# Project specific excludes
+#
+
+tomcat
+
+#
+# Default excludes
+#
+
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+
+# Maven 
+target/
+
+# IntelliJ project files 
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# eclipse project file
+.settings/
+.classpath
+.project
+
+
+
+# OS
+.DS_Store
+
+# Misc
+*.swp
+release.properties
+pom.xml.releaseBackup
+pom.xml.tag
+
+*.*~
