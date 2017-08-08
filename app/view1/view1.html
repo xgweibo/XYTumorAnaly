@@ -1,1 +1,15 @@
 <p>This is the partial for view 1.</p>
+<ul>
+    <li ng-repeat="oneuser in allusers">{{"muyejunzi@163.com" == oneuser.email && "jiayou2pang" != oneuser.password}}</li>
+    <li>Name  <input type="text" ng-model="userinfo.email"></li>
+    <li>Password  <input type="text" ng-model="userinfo.password"></li>
+    <li>Category  <input type="text" ng-model="userinfo.category"></li>
+    <li> <button type="submit" ng-click="login()">Login</button></li>
+    <li> <button type="submit" ng-click="signup()">Signup</button></li>
+    <li> <button type="submit" ng-click="updatepassword()">PasswordUpdate</button></li>
+</ul>
+<p>{{allusers.length}}</p>
+<p>{{errormsg}}</p>
+<p>{{temp}}</p>
+
+

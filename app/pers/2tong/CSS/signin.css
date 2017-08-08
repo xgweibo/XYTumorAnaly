@@ -1,0 +1,63 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color:#eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin select{
+    margin-bottom: -1px;
+    font-size:16px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 1px solid #ccc;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    padding-right: 14px;
+    padding:10px;
+    width:300px;
+    height:auto;
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center white;
+
+}
+
+.form-signin select[type="category"]::-ms-expand { display: none; }
+.form-signin select:focus{
+    border-color:#66afe9;
+    outline:0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}

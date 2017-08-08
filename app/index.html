@@ -6,38 +6,87 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>2tong @ Log in</title>
+  <meta name='keywords' content='System A,System B,System C,System D,System E,System F,XY'>
   <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="pers/2tong/IMG/XY32.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
+  <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="pers/2tong/CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        
+  <link href="pers/2tong/CSS/navbar-fixed-top.css" rel="stylesheet">
+  <link href="pers/2tong/CSS/sticky-footer-navbar.css" rel="stylesheet">
+  <link href="pers/2tong/CSS/theme.css" rel="stylesheet">
+  <link href="pers/2tong/CSS/signin.css" rel="stylesheet">
+  <link href="pers/2tong/CSS/signin.css" rel="stylesheet">
+  <link href="pers/2tong/CSS/jumbotron-narrow.css" rel="stylesheet">
+  
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link href="pers/2tong/CSS/bootstrap-theme.min.css" rel="stylesheet">
+  <script src="pers/2tong/JS/ie-emulation-modes-warning.js"></script>
+  <link href="pers/2tong/CSS/carousel.css" rel="stylesheet">
+  <script src="pers/2tong/JS/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <style type="text/CSS">
+     #RightDiv {
+        position: absolute; 
+        left: 46%;
+    }
+    #LeftDiv{ 
+        position:absolute;
+        left:20%;
+    }
+  </style>
 </head>
 <body>
+    <!--
   <ul class="menu">
     <li><a href="#!/view1">view1</a></li>
     <li><a href="#!/view2">view2</a></li>
-  </ul>
+  </ul>-->
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
   <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <!--Defined by onself-->
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="services.js"></script>
+  <script src="pers/2tong/companyHome/companyHome.js"></script>
+  <script src="pers/2tong/login/login.js"></script>
+  <script src="pers/2tong/setup/setup.js"></script>
+  <script src="pers/2tong/about/about.js"></script>
+  <script src="pers/2tong/contact/contact.js"></script>
+  <script src="pers/2tong/systemContentAdmin/systemContentAdmin.js"></script>
+  <script src="pers/2tong/systemContentGuest/systemContentGuest.js"></script>
+  
+  <!-- Bootstrap-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="pers/2tong/JS/jquery.min.js"><\/script>')</script>
+  <script src="pers/2tong/JS/bootstrap.min.js"></script>
+  <script src="pers/2tong/JS/docs.min.js"></script>
+  
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="pers/2tong/JS/ie10-viewport-bug-workaround.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+  <script src="bower_components/angular-jwt/dist/angular-jwt.js" type="text/javascript"></script>
+  <script src="bower_components/a0-angular-storage/dist/angular-storage.js" type="text/javascript"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>  
+  <script src="bower_components/angular-resource/angular-resource.js" type="text/javascript"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>     
 </body>
 </html>

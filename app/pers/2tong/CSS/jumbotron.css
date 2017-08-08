@@ -1,0 +1,58 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.time-vertical {
+    list-style-type: none;
+    border-left: 1px solid #707070;
+    padding: 0px;
+    height: 270px;
+}
+ 
+.time-vertical li {
+    height: 70px;
+    position: relative;
+}
+ 
+.time-vertical li a {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #000;
+}
+ 
+.time-vertical li b:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #428bca;
+    border-radius: 10px;
+    background-color:#428bca;
+}
+.time-vertical li:hover span {
+    color:#428bca;
+}
+.time-vertical li span {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    font-size:15px;
+    line-height:17px;
+    color:#555;
+}
+
+.time-vertical li p {
+    position: absolute;
+    left: 25px;
+    top:39px;
+}
+
+.companyHome-a a{
+    text-decoration: none;
+}
