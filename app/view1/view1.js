@@ -16,7 +16,7 @@ angular.module('myApp.view1', ['ngRoute'])
         password:"",
         category:""
     };
-    $scope.errormsg ="";
+    $scope.errormsg ='';
     $scope.tag = 0;
     $scope.temp;
     $scope.test;

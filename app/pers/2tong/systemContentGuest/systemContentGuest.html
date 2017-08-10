@@ -1,1 +1,55 @@
-<p>systemContentGuest</p>
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="#"><p>{{systemname}}</p></a>
+        </div>
+          <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#!/about">About</a></li>
+            <li><a href="#!/contact">Contact</a></li>
+            <li class="dropdown">
+                <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other Systems <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li>
+                    <a href="#!/SystemA/login" ng-show="systemname !== 'System A'">System A</a></li>
+                <li>
+                    <a href="#!/SystemB/login" ng-show="systemname !== 'System B'">System B</a></li> 
+                <li>
+                    <a href="#!/SystemC/login" ng-show="systemname !== 'System C'">System C</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Not the primary Systems</li>
+                <li>
+                    <a href="#!/SystemD/login" ng-show="systemname !== 'System D'">System D</a></li>
+                <li>
+                    <a href="#!/SystemE/login" ng-show="systemname !== 'System E'">System E</a></li>
+                <li>
+                    <a href="#!/SystemF/login" ng-show="systemname !== 'System F'">System F</a></li>
+                <li>
+                    <a href="#!/SystemG/login" ng-show="systemname !== 'System G'">System G</a></li>
+                <li>
+                    <a href="#!/SystemH/login" ng-show="systemname !== 'System H'">System H</a></li>
+                <li>
+                    <a href="#!/SystemI/login" ng-show="systemname !== 'System I'">System I</a></li>
+                <li>
+                    <a href="#!/SystemG/login" ng-show="systemname !== 'System J'">System J</a></li>
+                <li>
+                    <a href="#!/SystemK/login" ng-show="systemname !== 'System K'">System K</a></li>
+                <li>
+                    <a href="#!/SystemL/login" ng-show="systemname !== 'System L'">System L</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href={{logoutpath}}>Log out</a></li>
+            <li><a href=#>Help</a></li>
+          </ul>
+        </div>
+      </div>
+</nav>
