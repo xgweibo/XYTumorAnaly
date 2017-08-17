@@ -7,12 +7,12 @@
 
 angular.module('myApp.services',['ngResource'])
         .factory('Users',function($resource){
-         return $resource('http://localhost:8080/BackEndLogin04/webresources/userinfos',{},{
+         return $resource('http://localhost:8080/BackEndLogin06/webresources/userinfos',{},{
            query: {method:'GET',isArray:true}
-       })})
+       });})
    
         .factory('User',['$resource',function($resource){
-         return $resource('http://localhost:8080/BackEndLogin04/webresources/userinfos/:id',null,{
+         return $resource('http://localhost:8080/BackEndLogin06/webresources/userinfos/:id',null,{
            update: {method:'PUT'}
        });}])
        
@@ -22,7 +22,7 @@ angular.module('myApp.services',['ngResource'])
            create: {method: 'POST'},
            update: {method: 'PUT'},
            delme: {method: 'DELETE'}
-       })});
+       });});
 
    
 

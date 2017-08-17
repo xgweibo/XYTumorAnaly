@@ -1,0 +1,65 @@
+<div ng-controller="XYDiseaseGeneCreateCtrl as xydgcc">
+    <h1>Create Component</h1>
+    
+    <form id="XYPersonalGenomeCreateForm" name="XYPersonalGenomeCreateForm" class="form-horizontal" role="form"
+          ng-submit="xydgcc.creatediseaseGene()">
+        <legend class="sm-col-12">Disease Database Basic Information</legend>
+
+        <div class="form-group">
+            <label id="la_tmplname" for="tmplname" class="col-sm-4 control-label">Disease Database Name</label>
+
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="genename" id="genename" placeholder=""
+                       ng-model="xydgcc.diseaseGene.genename">
+            </div>
+        </div>
+        <div class="form-group">
+            <label id="la_description" for="description" class="col-sm-4 control-label">Source</label>
+
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="diseasename" id="diseasename" placeholder=""
+                       ng-model="xydgcc.diseaseGene.diseasename">
+            </div>
+        </div>   
+        <div class="form-group">
+            <label id="la_description" for="description" class="col-sm-4 control-label">Source</label>
+
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="diseasepheno" id="diseasepheno" placeholder=""
+                       ng-model="xydgcc.diseaseGene.diseasepheno">
+            </div>
+        </div>   
+        
+
+
+        <!-- class="cmpntparamgrid" 
+        <div id="paramgrid" ui-grid="InputgridOpts" class="grid"   ui-grid-edit ui-grid-selection width="100%"></div>
+
+        <div>
+            <button type="button" class="btn btn-default" ng-click="addOutputData()">Add Outputparams</button>
+
+            <button type="button" id="delData2" class="btn btn-danger" ng-class="{disabled:wftcc.outidselected == null}" 
+                    ng-click="outputdeleteSelected(wftcc.outidselected)">Del</button>
+
+        </div>-->
+
+        <!-- class="cmpntparamgrid" 
+        <div id="paramgrid2" ui-grid="OutputgridOpts" class="grid"  ui-grid-edit ui-grid-selection width="100%"></div>
+
+-->
+
+
+        <pre>{{ xydgcc.diseaseGene | json }}</pre>
+        <pre>{{ xydgcc.tarRow.entity | json }}</pre>
+
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8 text-right">
+                <a ng-href="#/XYDiseaseGeneList" id="btn_cancel" class="btn btn-warning">Cancel</a>
+
+                <button type="submit" class="btn btn-success" id="btn_create">Create DiseaseGene</button>
+            </div>
+        </div>
+
+
+    </form>    
+</div>

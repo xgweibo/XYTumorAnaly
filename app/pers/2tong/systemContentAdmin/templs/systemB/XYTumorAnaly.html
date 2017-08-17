@@ -1,0 +1,54 @@
+<body>
+    <div class="overall">
+        <div class="header">
+            <a href="http://www.nebulagene.com" title="网站首页" class="fl"><img src="http://www.nebulagene.com/wp-content/themes/bit/img/logo.jpg" width="191" height="68" alt="星云Logo"></a>
+            <div class="general fl">
+                <h2>Data Analysis of Tumor Genome Sequencing System</h2><hr>
+                <span> </span>
+
+            </div>
+        </div>
+
+        <div ng-controller="XYTumorAnalyCtrl as xytac">
+            <hr>
+            {{tao}}
+            <div>
+                <h1>Create Order</h1>
+                <form  id="XYOrderCreatForm" name="XYOrderCreatForm" class="form-horizontal" role="form"
+                       ng-submit="xytac.createPersonOrder()">
+                    <legend class="sm-col-12">Pipeline Basic Information</legend>
+
+                    <div class="form-group">
+                        <label id="la_tmplname" for="tmplname" class="col-sm-4 control-label">Personalgenome</label>
+                        <button type="button" class="btn btn-warning" ng-click="xytac.opengenome()">Choose</button>
+                        <a ng-href="#/XYPersonalgenomeList" class="btn btn-primary" id="btn_component_create">Edit</a>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" readonly name="genome" id="exec" placeholder=""
+                                   ng-model="xytac.Personorder.genomename = xytac.selected1">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="la_description" for="description" class="col-sm-4 control-label">Disease Database</label>
+                        <button type="button" class="btn btn-warning" ng-click="xytac.opendata()">Choose</button>
+                        <a ng-href="#/XYDiseaseDBList" class="btn btn-primary" id="btn_component_create">Edit</a>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" readonly name="database" id="workdir" placeholder=""
+                                   ng-model="xytac.Personorder.dataname = xytac.selected2">
+                        </div>
+                    </div>
+                    <pre>{{ xytac.Personorder | json }}</pre>
+                    <pre>{{ xytac.tarRow.entity | json }}</pre>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8 text-right">
+                            <button type="submit" class="btn btn-success" id="btn_create">Create Order</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</body>

@@ -1,0 +1,119 @@
+<body>
+    <div class="overall">
+        <div class="header">
+            <a href="http://www.nebulagene.com" title="网站首页" class="fl"><img src="http://www.nebulagene.com/wp-content/themes/bit/img/logo.jpg" width="191" height="68" alt="星云Logo"></a>
+            <div class="general fl">
+                <h2>Tumor targeting drug guidance system</h2><hr>
+                <span> </span>
+
+            </div>
+        </div>
+
+        <div ng-controller="XYDrugGeneListCtrl as xyddlc">
+            <hr>
+            <h1>Select disease comparison analysis data</h1>
+            <form id="XYGeneReportForm" name="XYGeneReportForm" class="form-horizontal" role="form">
+                <div class="form-group">
+                     <legend class="sm-col-12"><h2>Patient Name:<p style="color: #00b3ee">{{patient0}}</p></h2></legend>
+                    <div class="col-sm-offset-4 col-sm-8 text-right">
+                        <a ng-href="#/XYDiseaseGeneList/{{patient0}}" id="btn_cancel" class="btn btn-warning">last Step</a>
+                    </div>
+                </div>
+                
+            </form>    
+
+            <div> 
+               
+                <hr>
+                <div>
+                    <div class="form-group" style="text-align:center">
+                        <h2 >
+                            Drug Gene Table
+                            <span class="pull-right">
+                                <a ng-href="#/XYDrugGeneCreate" class="btn btn-primary" id="btn_component_create">Add Drug Gene</a>
+                                <a ng-href="#/XYDrugGeneUpdate/{{idselected.drugID}}" ng-class="{disabled:idselected==null}" 
+                                   class="btn btn-success" id="btn_component_update">Edit</a>                    
+                                <button type="button" id="delData" class="btn btn-danger" ng-class="{disabled:idselected==null}" 
+                                        ng-click="xyddlc.delDruggene(idselected.drugID,idselected.index)">Del</button>      
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" ng-model="searchText" placeholder="Type here to filter Component...">
+                        <hr>
+                    </div>
+                    <table id="Product_list" class="table table-hover"><!-- table-striped   -->
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Drug</th>
+                                <th>Gene</th>
+                                <th>Disease Name</th>
+                                <th>May Treat</th>
+                                <th>Adversere Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="onedrug in xyddlc.curPageItems | filter:searchText"
+                            ng-click="selectrow(onedrug,$index)"
+                            ng-class="{info: onedrug.drugID === idselected.drugID}">
+<!--                            <tr ng-repeat="onegene in xytglc.allgenes| filter:searchText" 
+                                ng-click="selectrow(onegene, $index)"
+                                ng-class="{info: onegene.ids == idselected.ids}">-->
+                                <td>
+                                    {{ onedrug.drugID}}
+                                </td>
+                                <td>
+                                    {{ onedrug.drugname}}
+                                </td>
+                                <td>
+                                    {{ onedrug.genename}}
+                                </td>
+                                <td>
+                                    {{ onedrug.diseasename}}
+                                </td> 
+                                <td>
+                                    {{ onedrug.treat}}
+                                </td> 
+                                <td>
+                                    {{ onedrug.adversereactions}}
+                                </td> 
+                                
+
+                                <!--td>
+                                    <a ng-href="#/WFComponentUpdate/{{or_el.idwfcomponent}}" class="btn btn-success pull-right" id="btn_product_update">Edit</a>
+                                    <button type="button" id="delData" class="btn btn-success" ng-click="wftlc.delProduct(or_el.idwfcomponent,$index)">Del</button>			
+                                </td-->
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" style="text-align:center;">
+                        <uib-pagination total-items="xyddlc.count" ng-model="xyddlc.currentPage" 
+                                        ng-change="xyddlc.pageChanged()" boundary-links="true"
+                                        boundary-link-numbers="true" max-size="10" items-per-page="xyddlc.pageSize"
+                                        >                                   
+                        </uib-pagination>
+                        </td>
+                        <td colspan="1" style="text-align:center;vertical-align:middle;">
+
+                            Total :<span class="badge">{{xyddlc.count}}</span>
+                            <ul class="nav nav-pills">
+                                <li role="presentation" class="active">
+                                </li>
+                            </ul>
+                            <span class="label label-primary"></span>
+                        </td> 
+                        </tr>
+                        </tfoot>
+                    </table>
+                    <div>
+                        <span class="pull-right">            
+                            <a ng-href="#/XYTumorDrugReport/{{patient0}}" id="btn_cancel" class="btn btn-warning">Start Drug Guidance Analysis</a>     
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,112 @@
+<body>
+    <div class="overall">
+        <div class="header">
+            <a href="http://www.nebulagene.com" title="网站首页" class="fl"><img src="http://www.nebulagene.com/wp-content/themes/bit/img/logo.jpg" width="191" height="68" alt="星云Logo"></a>
+            <div class="general fl">
+                <h2>Tumor targeting drug guidance system</h2><hr>
+                <span> </span>
+
+            </div>
+        </div>
+
+        <div ng-controller="XYDiseaseGeneListCtrl as xydglc">
+            <hr>
+            <h1>Select disease comparison analysis data</h1>
+            <form id="XYGeneReportForm" name="XYGeneReportForm" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <legend class="sm-col-12"><h2>Patient Name:<p style="color: #00b3ee">{{patient0}}</p></h2></legend>
+                    <div class="col-sm-offset-4 col-sm-8 text-right">
+                        
+                        <a ng-href="#/XYCancerpersonList/{{patient0}}" id="btn_cancel" class="btn btn-warning">last Step</a>
+                    </div>
+                </div>
+                
+            </form>    
+
+            <div> 
+               
+                <hr>
+                <div>
+                    <div class="form-group" style="text-align:center">
+                        <h2 >
+                            Disease Gene list
+                            <span class="pull-right">
+                                <a ng-href="#/XYDiseaseGeneCreate" class="btn btn-primary" id="btn_component_create">Add DiseaseDB</a>
+                                <a ng-href="#/XYDiseaseGeneUpdate/{{idselected.geneID}}" ng-class="{disabled:idselected==null}" 
+                                   class="btn btn-success" id="btn_component_update">Edit</a>                    
+                                <button type="button" id="delData" class="btn btn-danger" ng-class="{disabled:idselected==null}" 
+                                        ng-click="xydglc.delDiseasegene(idselected.geneID,idselected.index)">Del</button>      
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" ng-model="searchText" placeholder="Type here to filter Component...">
+                        <hr>
+                    </div>
+                    <table id="Product_list" class="table table-hover"><!-- table-striped   -->
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Gene Name</th>
+                                <th>Disease Name</th>
+                                <th>Disease Pheno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="onegene in xydglc.curPageItems | filter:searchText"
+                            ng-click="selectrow(onegene,$index)"
+                            ng-class="{info: onegene.geneID === idselected.geneID}">
+<!--                            <tr ng-repeat="onegene in xytglc.allgenes| filter:searchText" 
+                                ng-click="selectrow(onegene, $index)"
+                                ng-class="{info: onegene.ids == idselected.ids}">-->
+                                <td>
+                                    {{ onegene.geneID}}
+                                </td>
+                                <td>
+                                    {{ onegene.genename}}
+                                </td>
+                                <td>
+                                    {{ onegene.diseasename}}
+                                </td> 
+                                <td>
+                                    {{ onegene.diseasepheno}}
+                                </td> 
+                                
+
+                                <!--td>
+                                    <a ng-href="#/WFComponentUpdate/{{or_el.idwfcomponent}}" class="btn btn-success pull-right" id="btn_product_update">Edit</a>
+                                    <button type="button" id="delData" class="btn btn-success" ng-click="wftlc.delProduct(or_el.idwfcomponent,$index)">Del</button>			
+                                </td-->
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" style="text-align:center;">
+                        <uib-pagination total-items="xydglc.count" ng-model="xydglc.currentPage" 
+                                        ng-change="xydglc.pageChanged()" boundary-links="true"
+                                        boundary-link-numbers="true" max-size="10" items-per-page="xydglc.pageSize"
+                                        >                                   
+                        </uib-pagination>
+                        </td>
+                        <td colspan="1" style="text-align:center;vertical-align:middle;">
+
+                            Total :<span class="badge">{{xydglc.count}}</span>
+                            <ul class="nav nav-pills">
+                                <li role="presentation" class="active">
+                                </li>
+                            </ul>
+                            <span class="label label-primary"></span>
+                        </td> 
+                        </tr>
+                        </tfoot>
+                    </table>
+                    <div>
+                        <span class="pull-right">            
+                            <a ng-href="#/XYDrugGeneList/{{patient0}}" id="btn_cancel" class="btn btn-warning">View Targeted Drugs Database</a>     
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

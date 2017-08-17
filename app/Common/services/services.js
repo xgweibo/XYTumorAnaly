@@ -65,41 +65,7 @@ commonModule.factory('PTYPEMAPTABLE', function (PARAMTYPEOPTIONS, BuildHashTable
     return BuildHashTable.getHashTable(PARAMTYPEOPTIONS);
 });
 
-/*-------Columns for Component Parameter--------------*/
-/*
-commonModule.value('CMPNTPARAMCOLUMNS1',
-        [{field: 'paramname', name: 'Name', enableCellEdit: true},
-            {field: 'direction', name: 'Direction'},
-            {field: 'comment', name: 'Comment'},
-            {field: 'valtype', name: 'Value Type'},
-            {field: 'paramtype', name: 'Parameter Type'},
-            {field: 'prefix', name: 'Prefix'},
-            {field: 'post', name: 'Position'},
-            {field: 'defaultval', name: 'Default Value'}]);
 
-commonModule.value('CMPNTPARAMCOLUMNS2',
-        [{field: 'paramname', name: 'Name', enableCellEdit: true},
-            {field: 'direction', name: 'Direction'},
-            {field: 'comment', name: 'Comment'},
-            {field: 'valtype', name: 'Value Type'},
-            {field: 'paramtype', name: 'Parameter Type'},
-            {field: 'prefix', name: 'Prefix'},
-            {field: 'post', name: 'Position'},
-            {field: 'defaultval', name: 'Default Value'}]);
-
-commonModule.factory('GridRowData', function () {
-    var gridRowFunc = {};
-    gridRowFunc.addNewRow = function (gridColumnIn) {
-        var newRowData = {};
-        for (var i = 0; i < gridColumnIn.length; i++) {
-            newRowData[ gridColumnIn[i].field ] = "";
-        }
-        return newRowData;
-    };
-
-    return gridRowFunc;
-});
-*/
 
 
 
@@ -173,7 +139,7 @@ commonModule.factory('OpuserAuthen', function ($resource, WFBackendAddr) {//WSAD
 });
 
 commonModule.factory('WFComponentWS', function ($resource, WFBackendAddr) {
-    return $resource(WFBackendAddr + '/geneinfos/:id', {}, {
+    return $resource(WFBackendAddr + '/wfcomponents/:id', {}, {
         create: {method: 'POST'},
         update: {method: 'PUT'},
         delme: {method: 'DELETE'}
@@ -188,13 +154,141 @@ commonModule.factory('WFCmpntParamWS', function ($resource, WFBackendAddr) {
     });
 });
 
-commonModule.factory('PredictInfoWS', function ($resource, WFBackendAddr) {
-    return $resource(WFBackendAddr + '/predictinfos/:id', {}, {
+commonModule.factory('Diseasedb', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/diseasedb/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'},
+        findall: {method: 'GET', isArray:'true'}
+    });
+});
+
+
+commonModule.factory('Personalgenome', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/personalgenome/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'},
+       findall: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+commonModule.factory('Order1', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/order1/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'}
+//        findall: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+
+commonModule.factory('Order2', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/order2/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'}
+//        findall: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+commonModule.factory('Cancerperson', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/cancerperson/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'}
+//        findall: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+commonModule.factory('Tumordisease', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/tumordisease/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'}
+//        findall: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+commonModule.factory('Tumorgene', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/tumorgene/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'}
+//        findall: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+commonModule.factory('Targetdrug', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/targetdrug/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'}
+//        findall: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+commonModule.factory('Diseasegene', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/diseasegene/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'},
+        get: {method: 'GET' , isArray: 'true' },
+        findall: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+commonModule.factory('Diseasegene0', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/diseasegene/:id', {}, {
         create: {method: 'POST'},
         update: {method: 'PUT'},
         delme: {method: 'DELETE'}
     });
 });
+
+commonModule.factory('Diseasegenepage', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/diseasegene/bypage/:pageNum/:pageSize', {}, {
+        list: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+commonModule.factory('Genelist', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/genelist/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'},
+        get: {method: 'GET' , isArray: 'true' }
+    });
+});
+commonModule.factory('DrugGene', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/diseasedrug/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'},
+        get: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+commonModule.factory('DrugGene0', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/diseasedrug/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'}
+    });
+});
+
+commonModule.factory('Genelistpage', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/genelist/bypage/:pageNum/:pageSize', {}, {
+        list: {method: 'GET' , isArray: 'true' }
+    });
+});
+
+commonModule.factory('DrugGenepage', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/diseasedrug/bypage/:pageNum/:pageSize', {}, {
+        list: {method: 'GET' , isArray: 'true' }
+    });
+});
+
 commonModule.factory('getJWTuseridByStore', function (store, jwtHelper) {
     return function () {
         var JWToken = store.get('jwt_opuser');

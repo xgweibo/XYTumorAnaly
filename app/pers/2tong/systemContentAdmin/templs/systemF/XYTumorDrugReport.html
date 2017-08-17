@@ -1,0 +1,70 @@
+<body>
+<div class="overall">
+<div class="header">
+  <a href="http://www.nebulagene.com" title="网站首页" class="fl"><img src="http://www.nebulagene.com/wp-content/themes/bit/img/logo.jpg" width="191" height="68" alt="星云Logo"></a>
+  <div class="general fl">
+      <h2>Data Analysis of Tumor Genome Sequencing System</h2><hr>
+    <span> </span>
+    
+  </div>
+</div>
+<div ng-controller="XYDrugReportCtrl as xydrc">
+    <hr>
+    <h1>Risk Prediction Process State</h1>
+    <form id="XYGeneReportForm" name="XYGeneReportForm" class="form-horizontal" role="form">
+         <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8 text-right">
+                <a ng-href="#/XYDrugGiude" id="btn_cancel" class="btn btn-warning">Reselect</a>
+            </div>
+        </div>
+        <legend class="sm-col-12">Order Basic Information</legend>
+
+        <div class="form-group">
+            <label id="la_exec" for="genome" class="col-sm-4 control-label">Patient</label>
+
+            <div class="col-sm-8">
+                <input type="text" class="form-control" readonly name="patient" id="patient" placeholder=""
+                       ng-model="patient">
+            </div>
+        </div>
+       
+
+
+    </form>    
+</div>
+    <div>    
+        <br>
+        <h1>Order Process</h1>
+        <hr>
+        <div class="progress">  
+        <div ng-class="['Bar',vm.style]" ng-style="{width:vm.progress+'%'}">  
+            <div ng-if='vm.text'>{{vm.progress}}%</div>  
+        </div>  
+        </div>  
+        </br>  
+        <label>  
+            颜色：  
+            <select ng-model='vm.style' ng-init="vm.style='blue'">  
+                <option value="red">red</option>  
+                <option value="green">green</option>  
+                <option value="blue">blue</option>  
+            </select>  
+        </label>  
+        </br></br>  
+        <label>进度：  
+            <input type="number" ng-model='vm.progress' ng-change="vm.myFunc()" ng-init="vm.progress = 0">  
+            <button ng-click='vm.progress=0'>0%</button>  
+            <button ng-click='vm.progress=20'>20%</button>  
+            <button ng-click='vm.progress=40'>40%</button>  
+            <button ng-click='vm.progress=60'>60%</button>  
+            <button ng-click='vm.progress=80'>80%</button>
+            <button ng-click='vm.progress=100'>100%</button>
+        </label>  
+        </br></br>  
+        <label>  
+            是否显示文字：  
+            <input type="checkbox" ng-model='vm.text'>  
+        </label>
+    </div>
+</div>
+</body>

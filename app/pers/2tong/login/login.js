@@ -170,7 +170,7 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        location.href='systemB/admin.html';
+                        location.href='tumoranalyindex.html';
                      }
                     else{
                        location.href='systemB/guest.html';
@@ -438,7 +438,7 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        location.href='systemF/admin.html';
+                        location.href='tumordrugindex.html';
                     }
                     else{
                         location.href='systemF/guest.html';

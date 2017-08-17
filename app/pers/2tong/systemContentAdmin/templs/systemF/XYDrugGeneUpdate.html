@@ -1,0 +1,64 @@
+<div ng-controller="XYDrugGeneUpdataCtrl as xydguc">
+    <h1>Update Drug Gene</h1>
+    <form id="DiseasegeneUpdateForm" name="DiseasegeneUpdateForm" class="form-horizontal" role="form"
+          ng-submit="xydguc.updateDruggene()">
+        <legend class="sm-col-12">Drug Gene Basic Information</legend>
+
+        <div class="form-group">
+            <label id="la_cmpntid" for="cmpntid" class="col-sm-4 control-label">DrugID</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" readonly name="cmpntid" id="cmpntid" placeholder=""
+                       ng-model="xydguc.newdruggene.drugID">
+            </div>
+        </div>
+        <div class="form-group">
+            <label id="la_exec" for="exec" class="col-sm-4 control-label">Gene Name</label>
+
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="drugname" id="drugname" placeholder=""
+                       ng-model="xydguc.newdruggene.drugname">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label id="la_exec" for="exec" class="col-sm-4 control-label">Gene Name</label>
+
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="genename" id="genename" placeholder=""
+                       ng-model="xydguc.newdruggene.genename">
+            </div>
+        </div>
+        <div class="form-group">
+            <label id="la_exec" for="exec" class="col-sm-4 control-label">Gene Name</label>
+
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="diseasename" id="diseasename" placeholder=""
+                       ng-model="xydguc.newdruggene.diseasename">
+            </div>
+        </div>
+        <div class="form-group">
+            <label id="la_description" for="description" class="col-sm-4 control-label">Disease Name</label>
+
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="treat" id="treat" placeholder=""
+                       ng-model="xydguc.newdruggene.treat">
+            </div>
+        </div>   
+        <div class="form-group">
+            <label id="la_description" for="description" class="col-sm-4 control-label">Disease Pheno</label>
+
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="adversereactions" id="adversereactions" placeholder=""
+                       ng-model="xydguc.newdruggene.adversereactions">
+            </div>
+        </div>   
+
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8 text-right">
+                <a ng-href="#/XYDrugGeneList" id="btn_cancel" class="btn btn-warning">Cancel</a>
+
+                <button type="submit" class="btn btn-success" id="btn_create">Update DrugGene</button>
+            </div>
+        </div>
+    </form>    
+</div>

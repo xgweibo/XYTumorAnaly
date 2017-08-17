@@ -1,0 +1,50 @@
+<div class="form-group">
+    <h3>
+        Please choose a personal genome!
+    </h3>
+</div>
+<div class="form-group">
+    <input class="form-control" type="text" ng-model="searchText" placeholder="Type here to filter Component...">
+    <hr>
+</div>S
+<table id="Product_list" class="table table-hover"><!-- table-striped   -->
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Encode</th>
+            <th>Type</th>
+            <th>Choose</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="onegenome in xycgc.allpersonalgenome| filter:searchText" 
+            ng-click="selectrow(onegenome, $index)"
+            ng-class="{info: onegenome.personalgenomeid == idselected.personalgenomeid}">
+            <td>
+                {{ onegenome.personalgenomeid}}
+            </td>
+            <td>
+                {{ onegenome.personalgenomename}}
+            </td>
+            <td>
+                {{ onegenome.encode}}
+            </td>
+            <td>
+                {{ onegenome.type}}
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger" 
+                        ng-click="xycgc.choosegene(idselected.personalgenomename)">Cho</button>
+            </td>
+            <!--td>
+                <a ng-href="#/WFComponentUpdate/{{or_el.idwfcomponent}}" class="btn btn-success pull-right" id="btn_product_update">Edit</a>
+                <button type="button" id="delData" class="btn btn-success" ng-click="wftlc.delProduct(or_el.idwfcomponent,$index)">Del</button>			
+            </td-->
+        </tr>
+    </tbody>
+</table>
+<strong>Selected:</strong> {{xycgc.selected.pergene}}
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="xycgc.ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="xycgc.cancel()">Cancel</button>
