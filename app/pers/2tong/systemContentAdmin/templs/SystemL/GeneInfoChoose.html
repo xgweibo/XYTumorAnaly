@@ -1,0 +1,44 @@
+<div ng-controller="GeneInfoChooseCtrl as gicc" ng-click="gicc.predict()">
+    <div>
+        <h2 style="text-align:center;">选择基因组</h2>
+    </div>
+        <div>
+            <div class="form-group">
+                <input class="form-control" type="text" ng-model="searchText" placeholder="Type here to filter Component...">
+                <hr>
+            </div>
+            <table id="Product_list" class="table table-hover"><!-- table-striped   -->
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>基因Id</th>
+                    <th>基因归属者姓名</th>
+                    <th>采集时间</th>                    
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="or_el in gicc.allGeneInfos | filter:searchText" 
+                    ng-click="selectrow(or_el,$index)">
+                    <td>
+                       <input type="checkbox" name="chooseForPredict" value={{or_el}} onclick="gicc.choose(this)" /> {{or_el.id}}
+                    </td>
+                    <td>
+                        {{or_el.geneId}}
+                    </td>
+                    <td>
+                        {{or_el.name}}
+                    </td>
+                    <td>
+                        {{or_el.time}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    <div>
+        <span class="pull-right">
+            <a ng-href="#/predictInfo" id="btn_cancel" class="btn btn-warning">Cancel</a>             
+            <button type="submit" class="btn btn-success" id="btn_create" >Predict</button>
+        </span>
+    </div>
+</div>

@@ -9,8 +9,6 @@ angular.module('myApp', [
   'myApp.setup',
   'myApp.about',
   'myApp.contact',
-  'myApp.systemContentGuest',
-  'myApp.systemContentAdmin',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

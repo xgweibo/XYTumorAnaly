@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html ng-app="workflowapp" > <!--<![endif]-->
+    <!-- class="no-js"-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>2tong @ Log in</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet" type="text/css"/>
+
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css/flowchart.css" rel="stylesheet" type="text/css"/>
+        <link href="css/ui-grid.css" rel="stylesheet" type="text/css"/>
+        
+         <!-- Bootstrap-->
+        <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="pers/2tong/CSS/navbar-fixed-top.css" rel="stylesheet">
+        <link href="pers/2tong/CSS/dashboard.css" rel="stylesheet">
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="pers/2tong/CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        
+        <script src="pers/2tong/JS/ie-emulation-modes-warning.js"></script>
+        
+        <!-- <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+        <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+        <link rel="stylesheet" href="app.css">-->
+        <!-- Custom styles for this template 
+        <link href="css/blog.css" rel="stylesheet">-->
+        <!-- <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
+    </head>
+    <body>
+        <div ng-controller="WorkflowIndexCtrl as ic">
+        <!-- fixed-top-->
+        <nav class="navbar navbar-default navbar-fixed-top" style="width:90%;margin-left: 80px;">
+            <div class="container">
+                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                     <a class="navbar-brand" href="#"><p>个人基因组疾病风险预测系统</p></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">主页</a></li>
+                        <li><a href="#!/about">关于</a></li>
+                        <li><a href="#!/contact">联系我们</a></li>
+                        <li class="dropdown">
+                        <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其他子系统 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                 <a href="#!/SystemA/login" >个人基因组测序数据分析工作流系统</a></li> 
+                            <li>
+                                 <a href="#!/SystemB/login" >肿瘤基因组测序数据分析工作流系统</a></li> 
+                            <li>
+                                 <a href="#!/SystemC/login">个人基因组注释系统</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">其余9个子系统</li>
+                            <li>
+                                <a href="#!/SystemD/login">家庭基因组测序数据分析工作流系统</a></li>
+                            <li>
+                                <a href="#!/SystemE/login">家庭基因组注释系统</a></li>
+                            <li>
+                                <a href="#!/SystemF/login">肿瘤靶向用药指导基因检测系统</a></li>
+                            <li>
+                                <a href="#!/SystemG/login">植入胚胎前遗传诊断系统</a></li>
+                            <li>
+                                <a href="#!/SystemH/login">新生儿遗传病基因检测系统</a></li>
+                            <li>
+                                <a href="#!/SystemI/login">个人基因组药物反应预测系统</a></li>
+                            <li>
+                                <a href="#!/SystemJ/login">基于个人基因组的健康规划系统</a></li>
+                            <li>
+                                <a href="#!/SystemK/login">个人基因组测序质量控制系统</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href=#>退出</a></li>
+                        <li><a href=#>帮助</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                         <!-- <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li> -->
+                         <li><a href="#/overview">综述</a></li>
+                         <li><a href="#/geneInfo">基因信息</a></li> 
+                         <li><a href="#/predictInfo">预测信息</a></li> 
+                            <!--<li><a href="#/WFTemplateList">Pipelines</a></li>                                        
+                            
+                            li><a href="#/JobRunner">Jobs</a></li>
+                            <li><a href="#/Terminal" >Terminal</a></li-->
+                            
+                            <!--<li><a href="#/Progressbar">Progressbar</a></li>-->
+                    </ul>
+                </div>
+           <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                        <!--<h1 class="page-header">Dashboard</h1> -->
+
+                        <div ng-view mouse-capture></div>
+
+                        <div>Angular seed app: v<span app-version></span></div>
+
+                        <footer class="blog-footer">
+                            <p>&copy; nebulagene.com 2017 </p>
+                            <p>
+                                <a href="#">Back to top</a>
+
+                            </p>
+                        </footer>
+                    </div>  
+                    <!-- In production use:
+                    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+                    -->
+                </div>
+            </div>
+        </div>
+        <script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>  
+        <script src="bower_components/angular-resource/angular-resource.js" type="text/javascript"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js" type="text/javascript"></script>
+        <script src="bower_components/angular-jwt/dist/angular-jwt.js" type="text/javascript"></script>
+        <script src="bower_components/a0-angular-storage/dist/angular-storage.js" type="text/javascript"></script>
+        <script src="admin.js" type="text/javascript"></script>
+        <script src="Common/Common.js"></script>
+        <script src="Common/services/services.js"></script>         
+  
+        
+        <script src="WorkflowIndex/WorkflowIndex.js" type="text/javascript"></script>
+        <script src="WorkflowIndex/controllers/WorkflowIndexCtrl.js" type="text/javascript"></script>
+      <!--  <script src="WorkflowIndex/controllers/WorkflowLoginCtrl.js" type="text/javascript"></script>-->
+        <!--
+        <script src="WorkflowIndex/controllers/WFTemplateListCtrl.js" type="text/javascript"></script>
+        <script src="WorkflowIndex/controllers/WFTemplateCreateCtrl.js" type="text/javascript"></script>
+        <script src="WorkflowIndex/controllers/WFTemplateUpdateCtrl.js" type="text/javascript"></script>
+        <script src="WorkflowIndex/controllers/WFTemplateDesignerCtrl.js" type="text/javascript"></script>
+        -->
+        <script src="pers/2tong/systemContentAdmin/controllers/SystemL/GeneInfoRetrieve.js" type="text/javascript"></script>
+        <script src="WorkflowIndex/controllers/WFComponentCreateCtrl.js" type="text/javascript"></script>
+        <script src="pers/2tong/systemContentAdmin/controllers/SystemL/GeneInfoUpdate.js" type="text/javascript"></script>
+        <!--script src="WorkflowIndex/controllers/WFComponentListChooserCtrl.js" type="text/javascript"></script-->
+        <script src="pers/2tong/systemContentAdmin/controllers/SystemL/PredictInfoRetrieve.js" type="text/javascript"></script>
+        <script src="pers/2tong/systemContentAdmin/controllers/SystemL/PredictInfoUpdate.js" type="text/javascript"></script>
+        
+        
+        <script src="WorkflowIndex/controllers/WFCmpntParamsListCtrl.js" type="text/javascript"></script>
+        <script src="WorkflowIndex/controllers/WFCmpntParamCreateCtrl.js" type="text/javascript"></script>
+        <script src="WorkflowIndex/controllers/WFCmpntParamUpdateCtrl.js" type="text/javascript"></script>
+        
+        <script src="WorkflowIndex/controllers/ProgressbarCtrl.js" type="text/javascript"></script>
+        <script src="WorkflowIndex/controllers/WFJobRunnerCtrl.js" type="text/javascript"></script>
+        
+        
+        
+        <script src="Home/Home.js" type="text/javascript"></script>
+        <script src="Home/controllers/HomeCtrl.js" type="text/javascript"></script>
+
+        
+        <script src="components/version/version.js"></script>
+        <script src="components/version/version-directive.js"></script>
+        <script src="components/version/interpolate-filter.js"></script>
+        <!--
+        <script src="bower_components/angular-flowchart/svg_class.js" type="text/javascript"></script>
+        <script src="bower_components/angular-flowchart/mouse_capture_service.js" type="text/javascript"></script>
+        <script src="bower_components/angular-flowchart/dragging_service.js" type="text/javascript"></script>
+        <script src="bower_components/angular-flowchart/flowchart_directive.js" type="text/javascript"></script>        
+        <script src="bower_components/angular-flowchart/flowchart_viewmodel.js" type="text/javascript"></script>
+        <!-- -->
+        <!-- ui grid -->        
+        <script src="bower_components/angular-ui-grid/ui-grid.js" type="text/javascript"></script>
+        <!--script src="bower_components/angular-ui-grid/ui-grid.css"></script-->
+        <link href="bower_components/angular-ui-grid/ui-grid.css" rel="stylesheet" type="text/css"/>
+        <script src="bower_components/angular-websocket/dist/angular-websocket.js" type="text/javascript"></script>
+        
+    </body>
+</html>

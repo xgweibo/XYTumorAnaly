@@ -111,7 +111,7 @@ commonModule.factory('WFBackendAddr', function (ISDEBUG) {
     var backend_config_debug = {
         backend_host: 'localhost', //localhost
         //backend_name: 'XYWorkflowServer',
-        backend_name: 'XYSampleServer2',
+        backend_name: 'BackEndLogin06',
         
         backend_port: '8080' //8080
     };
@@ -173,7 +173,7 @@ commonModule.factory('OpuserAuthen', function ($resource, WFBackendAddr) {//WSAD
 });
 
 commonModule.factory('WFComponentWS', function ($resource, WFBackendAddr) {
-    return $resource(WFBackendAddr + '/wfcomponents/:id', {}, {
+    return $resource(WFBackendAddr + '/geneinfos/:id', {}, {
         create: {method: 'POST'},
         update: {method: 'PUT'},
         delme: {method: 'DELETE'}
@@ -188,6 +188,13 @@ commonModule.factory('WFCmpntParamWS', function ($resource, WFBackendAddr) {
     });
 });
 
+commonModule.factory('PredictInfoWS', function ($resource, WFBackendAddr) {
+    return $resource(WFBackendAddr + '/predictinfos/:id', {}, {
+        create: {method: 'POST'},
+        update: {method: 'PUT'},
+        delme: {method: 'DELETE'}
+    });
+});
 commonModule.factory('getJWTuseridByStore', function (store, jwtHelper) {
     return function () {
         var JWToken = store.get('jwt_opuser');

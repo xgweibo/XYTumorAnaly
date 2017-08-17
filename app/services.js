@@ -14,7 +14,15 @@ angular.module('myApp.services',['ngResource'])
         .factory('User',['$resource',function($resource){
          return $resource('http://localhost:8080/BackEndLogin04/webresources/userinfos/:id',null,{
            update: {method:'PUT'}
-       });}]);
+       });}])
+       
+        .factory('GeneInfos',function($resource){
+         return $resource('localhost:8080/BackEndLogin06/webresources/geneinfos/:id',{},{
+           query: {method:'GET',isArray:true},
+           create: {method: 'POST'},
+           update: {method: 'PUT'},
+           delme: {method: 'DELETE'}
+       })});
 
    
 

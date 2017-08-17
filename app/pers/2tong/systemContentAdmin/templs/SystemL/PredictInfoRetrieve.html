@@ -1,0 +1,83 @@
+ <div ng-controller="PredictInfoListCtrl as pilc">
+        <!--div class="col-lg-12 page-header">
+                <h2>
+                Pipelines
+                </h2>
+        </div-->
+
+        <div>
+            <div class="form-group">
+                <h3>
+                    预测信息
+                    <span class="pull-right">
+                    <a ng-href="#/predictInfo/add" class="btn btn-primary" id="btn_component_create">Add Component</a>
+                    <a ng-href="#/predictInfo/update/{{idselected.id}}" ng-class="{disabled:idselected==null}"
+                       class="btn btn-success" id="btn_component_update">Edit</a>                    
+                    <button type="button" id="delData" class="btn btn-danger" ng-class="{disabled:idselected==null}"
+                            ng-click="pilc.delComponent(idselected.id,idselected.index)">Del</button>  
+                    </span>
+                </h3>
+                	
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" ng-model="searchText" placeholder="Type here to filter Component...">
+                <hr>
+            </div>
+
+
+            <table id="Product_list" class="table table-hover"><!-- table-striped   -->
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>基因Id</th>
+                    <th>预测时间</th>
+                    <th>预测结果</th>                    
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="or_el in pilc.allPredictInfos | filter:searchText" 
+                    ng-click="selectrow(or_el,$index)"
+                    ng-class="{info: or_el.id == idselected.id}">
+                    <td>
+                        {{or_el.id}}
+                    </td>
+                    <td>
+                        {{or_el.geneId}}
+                    </td>
+                    <td>
+                        {{or_el.predictTime}}
+                    </td>
+                    <td>
+                        {{or_el.result}}
+                    </td>
+                    <!--td>
+                        <a ng-href="#/WFComponentUpdate/{{or_el.idwfcomponent}}" class="btn btn-success pull-right" id="btn_product_update">Edit</a>
+			<button type="button" id="delData" class="btn btn-success" ng-click="wftlc.delProduct(or_el.idwfcomponent,$index)">Del</button>			
+                    </td-->
+                </tr>
+                <tr ng-hide="pilc.allPredictInfos.length">
+                    <td colspan="4">
+                        <p class="text-center">No Component Found</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h3>
+                Debug
+            </h3>
+            <hr>
+            <!--PL: TOFIX: Problem, it doesn't work.-->
+           <accordion>
+                <accordion-group is-open="status.open">
+                    <accordion-heading>
+                        Json Data <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                    </accordion-heading>
+                    <pre>selected: {{idselected| json}}</pre>
+                    <pre>{{ pilc.allPredictInfos | json }}</pre>
+                </accordion-group>
+            </accordion>
+          
+        </div>
+
+    </div>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminSystemL">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>2tong @ Log in</title>
+        <meta name='keywords' content='System L,XY'>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../pers/2tong/IMG/XY32.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Bootstrap-->
+        <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../pers/2tong/CSS/navbar-fixed-top.css" rel="stylesheet">
+        
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="../pers/2tong/CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        
+        <script src="../pers/2tong/JS/ie-emulation-modes-warning.js"></script>
+    </head>
+    <body>
+       <!-- fixed-top-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                     <a class="navbar-brand" href="#"><p>个人基因组疾病风险预测系统</p></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">主页</a></li>
+                        <li><a href="#!/about">关于</a></li>
+                        <li><a href="#!/contact">联系我们</a></li>
+                        <li class="dropdown">
+                        <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其他子系统 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                 <a href="#!/SystemA/login" >个人基因组测序数据分析工作流系统</a></li> 
+                            <li>
+                                 <a href="#!/SystemB/login" >肿瘤基因组测序数据分析工作流系统</a></li> 
+                            <li>
+                                 <a href="#!/SystemC/login">个人基因组注释系统</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">其余9个子系统</li>
+                            <li>
+                                <a href="#!/SystemD/login">家庭基因组测序数据分析工作流系统</a></li>
+                            <li>
+                                <a href="#!/SystemE/login">家庭基因组注释系统</a></li>
+                            <li>
+                                <a href="#!/SystemF/login">肿瘤靶向用药指导基因检测系统</a></li>
+                            <li>
+                                <a href="#!/SystemG/login">植入胚胎前遗传诊断系统</a></li>
+                            <li>
+                                <a href="#!/SystemH/login">新生儿遗传病基因检测系统</a></li>
+                            <li>
+                                <a href="#!/SystemI/login">个人基因组药物反应预测系统</a></li>
+                            <li>
+                                <a href="#!/SystemJ/login">基于个人基因组的健康规划系统</a></li>
+                            <li>
+                                <a href="#!/SystemK/login">个人基因组测序质量控制系统</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href=#>退出</a></li>
+                        <li><a href=#>帮助</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       <div ng-view></div>
+        <!-- content -->
+        
+        <!-- Bootstrap-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../pers/2tong/JS/jquery.min.js"><\/script>')</script>
+        <script src="../pers/2tong/JS/bootstrap.min.js"></script>
+        <script src="../pers/2tong/JS/docs.min.js"></script>
+        <script src="admin.js" type="text/javascript"></script>
+        <script src="../pers/2tong/systemContentAdmin/controllers/SystemL/overview.js" type="text/javascript"></script>
+        <script src="../components/version/version.js"></script>
+        <script src="../components/version/version-directive.js"></script>
+        <script src="../components/version/interpolate-filter.js"></script>
+        <script src="../bower_components/angular-jwt/dist/angular-jwt.js" type="text/javascript"></script>
+        <script src="../bower_components/a0-angular-storage/dist/angular-storage.js" type="text/javascript"></script>
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>  
+        <script src="../bower_components/angular-resource/angular-resource.js" type="text/javascript"></script>
+        <script src="../bower_components/angular-route/angular-route.js"></script>  
+    </body>
+</html>

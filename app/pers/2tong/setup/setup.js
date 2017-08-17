@@ -61,7 +61,7 @@ angular.module('myApp.setup', ['ngRoute'])
         category:''
     };
     $scope.path="pers/2tong/IMG/background_systemA.jpg";
-    $scope.systemname='System A';
+    $scope.systemname='个人基因组测序数据分析工作流系统';
     $scope.loginpath = "#!/SystemA/login";
     $scope.signuppath ="#!/SystemA/signup";
     $scope.systemsql="systemA";
@@ -82,14 +82,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -98,10 +98,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemA/contentAdmin');
+                        location.href='systemA/admin.html';
                      }
                      else{
-                          $location.path('/SystemA/contentGuest');
+                        location.href='systemA/guest.html';
                      }
                 }
                 else{
@@ -121,7 +121,7 @@ angular.module('myApp.setup', ['ngRoute'])
     };
     
     $scope.path="pers/2tong/IMG/background_systemB.jpg";
-    $scope.systemname='System B';
+    $scope.systemname='肿瘤基因组测序数据分析工作流系统';
     $scope.loginpath = "#!/SystemB/login";
     $scope.signuppath ="#!/SystemB/signup";
     $scope.systemsql="systemB";
@@ -142,14 +142,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -158,10 +158,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemB/contentAdmin');
+                        location.href='systemB/admin.html';
                      }
                      else{
-                          $location.path('/SystemB/contentGuest');
+                        location.href='systemB/guest.html';
                      }
                 }
                 else{
@@ -181,7 +181,7 @@ angular.module('myApp.setup', ['ngRoute'])
     };
 
     $scope.path="pers/2tong/IMG/background_systemC.jpg";
-    $scope.systemname='System C';
+    $scope.systemname='个人基因组注释系统';
     $scope.loginpath = "#!/SystemC/login";
     $scope.signuppath ="#!/SystemC/signup";
     $scope.systemsql="systemC";
@@ -202,14 +202,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -218,10 +218,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemC/contentAdmin');
+                        location.href='systemC/admin.html';
                      }
                      else{
-                          $location.path('/SystemC/contentGuest');
+                       location.href='systemC/guest.html';
                      }
                 }
                 else{
@@ -242,7 +242,7 @@ angular.module('myApp.setup', ['ngRoute'])
     };
     
     $scope.path="pers/2tong/IMG/background_systemD.jpg";
-    $scope.systemname='System D';
+    $scope.systemname='家庭基因组测序数据分析工作流系统';
     $scope.loginpath = "#!/SystemD/login";
     $scope.signuppath ="#!/SystemD/signup";
     $scope.systemsql="systemD";
@@ -263,14 +263,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -279,10 +279,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemD/contentAdmin');
+                         location.href='systemD/admin.html';
                      }
                      else{
-                          $location.path('/SystemD/contentGuest');
+                        location.href='systemD/guest.html';
                      }
                 }
                 else{
@@ -303,7 +303,7 @@ angular.module('myApp.setup', ['ngRoute'])
     };
     
     $scope.path="pers/2tong/IMG/background_systemE.jpg";
-    $scope.systemname='System E';
+    $scope.systemname='家庭基因组注释系统';
     $scope.loginpath = "#!/SystemE/login";
     $scope.signuppath ="#!/SystemE/signup";
     $scope.systemsql="systemE";
@@ -324,14 +324,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -340,10 +340,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemE/contentAdmin');
+                        location.href='systemE/admin.html';
                      }
                      else{
-                          $location.path('/SystemE/contentGuest');
+                        location.href='systemE/guest.html';
                      }
                 }
                 else{
@@ -364,7 +364,7 @@ angular.module('myApp.setup', ['ngRoute'])
     };
     
     $scope.path="pers/2tong/IMG/background_systemF.jpg";
-    $scope.systemname='System F';
+    $scope.systemname='肿瘤靶向用药指导基因检测系统';
     $scope.loginpath = "#!/SystemF/login";
     $scope.signuppath ="#!/SystemF/signup";
     $scope.systemsql="systemF";
@@ -385,14 +385,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -401,10 +401,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemF/contentAdmin');
+                        location.href='systemF/admin.html';
                      }
                      else{
-                          $location.path('/SystemF/contentGuest');
+                       location.href='systemF/guest.html';
                      }
                 }
                 else{
@@ -425,7 +425,7 @@ angular.module('myApp.setup', ['ngRoute'])
     };
     
     $scope.path="pers/2tong/IMG/background_systemG.jpg";
-    $scope.systemname='System G';
+    $scope.systemname='植入胚胎前遗传诊断系统';
     $scope.loginpath = "#!/SystemG/login";
     $scope.signuppath ="#!/SystemG/signup";
     $scope.systemsql="systemG";
@@ -446,14 +446,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -462,10 +462,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemG/contentAdmin');
+                         location.href='systemG/admin.html';
                      }
                      else{
-                          $location.path('/SystemG/contentGuest');
+                         location.href='systemG/guest.html';
                      }
                 }
                 else{
@@ -485,7 +485,7 @@ angular.module('myApp.setup', ['ngRoute'])
         category:''
     };
     $scope.path="pers/2tong/IMG/background_systemH.jpg";
-    $scope.systemname='System H';
+    $scope.systemname='新生儿遗传病基因检测系统';
     $scope.loginpath = "#!/SystemH/login";
     $scope.signuppath ="#!/SystemH/signup";
     $scope.systemsql="systemH";
@@ -506,14 +506,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -522,10 +522,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemH/contentAdmin');
+                         location.href='systemH/admin.html';
                      }
                      else{
-                          $location.path('/SystemH/contentGuest');
+                         location.href='systemH/guest.html';
                      }
                 }
                 else{
@@ -546,7 +546,7 @@ angular.module('myApp.setup', ['ngRoute'])
     };
     
     $scope.path="pers/2tong/IMG/background_systemI.jpg";
-    $scope.systemname='System I';
+    $scope.systemname='个人基因组药物反应预测系统';
     $scope.loginpath = "#!/SystemI/login";
     $scope.signuppath ="#!/SystemI/signup";
     $scope.systemsql="systemI";
@@ -567,14 +567,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -583,10 +583,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemI/contentAdmin');
+                         location.href='systemI/admin.html';
                      }
                      else{
-                          $location.path('/SystemI/contentGuest');
+                         location.href='systemI/guest.html';
                      }
                 }
                 else{
@@ -607,7 +607,7 @@ angular.module('myApp.setup', ['ngRoute'])
     };
     
     $scope.path="pers/2tong/IMG/background_systemJ.jpg";
-    $scope.systemname='System J';
+    $scope.systemname='基于个人基因组的健康规划系统';
     $scope.loginpath = "#!/SystemJ/login";
     $scope.signuppath ="#!/SystemJ/signup";
     $scope.systemsql="systemJ";
@@ -628,14 +628,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -644,10 +644,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemJ/contentAdmin');
+                        location.href='systemJ/admin.html';
                      }
                      else{
-                          $location.path('/SystemJ/contentGuest');
+                        location.href='systemJ/guest.html';
                      }
                 }
                 else{
@@ -668,7 +668,7 @@ angular.module('myApp.setup', ['ngRoute'])
     };
     
     $scope.path="pers/2tong/IMG/background_systemK.jpg";
-    $scope.systemname='System K';
+    $scope.systemname='个人基因组测序质量控制系统';
     $scope.loginpath = "#!/SystemK/login";
     $scope.signuppath ="#!/SystemK/signup";
     $scope.systemsql="systemK";
@@ -689,14 +689,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -705,10 +705,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemK/contentAdmin');
+                        location.href='systemK/admin.html';
                      }
                      else{
-                          $location.path('/SystemK/contentGuest');
+                        location.href='systemK/guest.html';
                      }
                 }
                 else{
@@ -729,7 +729,7 @@ angular.module('myApp.setup', ['ngRoute'])
     };
     
     $scope.path="pers/2tong/IMG/background_systemL.jpg";
-    $scope.systemname='System L';
+    $scope.systemname='个人基因组疾病风险预测系统';
     $scope.loginpath = "#!/SystemL/login";
     $scope.signuppath ="#!/SystemL/signup";
     $scope.systemsql="systemL";
@@ -750,14 +750,14 @@ angular.module('myApp.setup', ['ngRoute'])
         for(var i=0;i<sum;i++){
             var oneuser = $scope.allusers[i];
             if($scope.userinfo.email == oneuser.email && $scope.userinfo.category == oneuser.category && $scope.systemsql == oneuser.system){
-                $scope.errormsg = '#Email already exists';
+                $scope.errormsg = '#邮箱已被注册';
                 $scope.tag = 1;
                 break;
             }
         }
         if($scope.tag == 0){
             if($scope.userinfo.password != $scope.userinfo.confirmpassword){
-                $scope.errormsg='#Please confirm the password again';
+                $scope.errormsg='#两次输入密码不一致';
             }
             else{
                 sum=sum+1;
@@ -766,10 +766,10 @@ angular.module('myApp.setup', ['ngRoute'])
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
                 if(choose == true){
                      if($scope.userinfo.category == "admin"){
-                        $location.path('/SystemK/contentAdmin');
+                         location.href='systemL/admin.html';
                      }
                      else{
-                          $location.path('/SystemK/contentGuest');
+                          location.href='systemL/guest.html';
                      }
                 }
                 else{

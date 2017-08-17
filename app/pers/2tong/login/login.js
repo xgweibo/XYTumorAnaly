@@ -53,7 +53,7 @@ angular.module('myApp.login', ['ngRoute'])
   });
 }])
 
-.controller('LoginCtrlA', function($scope,Users,$location) {
+.controller('LoginCtrlA', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -64,7 +64,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.path="pers/2tong/IMG/background_systemA.jpg";
     $scope.loginpath = "#!/SystemA/login";
     $scope.signuppath ="#!/SystemA/signup";
-    $scope.systemname='System A';
+    $scope.systemname='个人基因组测序数据分析工作流系统';
     $scope.systemsql="systemA";
     $scope.allusers = Users.query();
     $scope.tag=0;
@@ -101,28 +101,28 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemA/contentAdmin');
+                        location.href='systemA/admin.html';
                      }
                      else{
-                          $location.path('/SystemA/contentGuest');
+                       location.href='systemA/guest.html';
                      }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
         
     };
     javascript:void(0);
 })
 
-.controller('LoginCtrlB', function($scope,Users,$location) {
+.controller('LoginCtrlB', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -131,7 +131,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemB.jpg";
-    $scope.systemname='System B';
+    $scope.systemname='肿瘤基因组测序数据分析工作流系统';
     $scope.loginpath = "#!/SystemB/login";
     $scope.signuppath ="#!/SystemB/signup";
     $scope.systemsql="systemB";
@@ -170,26 +170,26 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemB/contentAdmin');
+                        location.href='systemB/admin.html';
                      }
                     else{
-                          $location.path('/SystemB/contentGuest');
+                       location.href='systemB/guest.html';
                      }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
     };
     javascript:void(0);
 })
-.controller('LoginCtrlC', function($scope,Users,$location) {
+.controller('LoginCtrlC', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -198,7 +198,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemC.jpg";
-    $scope.systemname='System C';
+    $scope.systemname='个人基因组注释系统';
     $scope.loginpath = "#!/SystemC/login";
     $scope.signuppath ="#!/SystemC/signup";
     $scope.systemsql="systemC";
@@ -237,26 +237,26 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemC/contentAdmin');
+                         location.href='systemC/admin.html';
                      }
                      else{
-                          $location.path('/SystemC/contentGuest');
+                        location.href='systemC/guest.html';
                      }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
     };
     javascript:void(0);
 })
-.controller('LoginCtrlD', function($scope,Users,$location) {
+.controller('LoginCtrlD', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -265,7 +265,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemD.jpg";
-    $scope.systemname='System D';
+    $scope.systemname='家庭基因组测序数据分析工作流系统';
     $scope.loginpath = "#!/SystemD/login";
     $scope.signuppath ="#!/SystemD/signup";
     $scope.systemsql="systemD";
@@ -304,26 +304,26 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemD/contentAdmin');
+                        location.href='systemD/admin.html';
                      }
                      else{
-                          $location.path('/SystemD/contentGuest');
+                        location.href='systemD/guest.html';
                      }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
     };
     javascript:void(0);
 })
-.controller('LoginCtrlE', function($scope,Users,$location) {
+.controller('LoginCtrlE', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -332,7 +332,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemE.jpg";
-    $scope.systemname='System E';
+    $scope.systemname='家庭基因组注释系统';
     $scope.loginpath = "#!/SystemE/login";
     $scope.signuppath ="#!/SystemE/signup";
     $scope.systemsql="systemE";
@@ -371,26 +371,26 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemE/contentAdmin');
+                        location.href='systemE/admin.html';
                      }
                      else{
-                          $location.path('/SystemE/contentGuest');
+                       location.href='systemE/guest.html';
                      }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
     };
     javascript:void(0);
 })
-.controller('LoginCtrlF', function($scope,Users,$location) {
+.controller('LoginCtrlF', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -399,7 +399,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemF.jpg";
-    $scope.systemname='System F';
+    $scope.systemname='肿瘤靶向用药指导基因检测系统';
     $scope.loginpath = "#!/SystemF/login";
     $scope.signuppath ="#!/SystemF/signup";
     $scope.systemsql="systemF";
@@ -438,26 +438,26 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemF/contentAdmin');
+                        location.href='systemF/admin.html';
                     }
                     else{
-                          $location.path('/SystemF/contentGuest');
+                        location.href='systemF/guest.html';
                     }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#E邮箱尚未注册';
         }
     };
     javascript:void(0);
 })
-.controller('LoginCtrlG', function($scope,Users,$location) {
+.controller('LoginCtrlG', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -466,7 +466,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemG.jpg";
-    $scope.systemname='System G';
+    $scope.systemname='植入胚胎前遗传诊断系统';
     $scope.loginpath = "#!/SystemG/login";
     $scope.signuppath ="#!/SystemG/signup";
     $scope.systemsql="systemG";
@@ -505,26 +505,26 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemG/contentAdmin');
+                        location.href='systemG/admin.html';
                     }
                     else{
-                          $location.path('/SystemG/contentGuest');
+                        location.href='systemG/guest.html';
                     }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
     };
     javascript:void(0);
 })
-.controller('LoginCtrlH', function($scope,Users,$location) {
+.controller('LoginCtrlH', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -533,7 +533,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemH.jpg";
-    $scope.systemname='System H';
+    $scope.systemname='新生儿遗传病基因检测系统';
     $scope.loginpath = "#!/SystemH/login";
     $scope.signuppath ="#!/SystemH/signup";
     $scope.systemsql="systemH";
@@ -572,26 +572,26 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemH/contentAdmin');
+                        location.href='systemH/admin.html';
                     }
                     else{
-                          $location.path('/SystemH/contentGuest');
+                        location.href='systemH/guest.html';
                     }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
     };
     javascript:void(0);
 })
-.controller('LoginCtrlI', function($scope,Users,$location) {
+.controller('LoginCtrlI', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -600,7 +600,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemI.jpg";
-    $scope.systemname='System I';
+    $scope.systemname='个人基因组药物反应预测系统';
     $scope.loginpath = "#!/SystemI/login";
     $scope.signuppath ="#!/SystemI/signup";
     $scope.systemsql="systemI";
@@ -639,26 +639,26 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemI/contentAdmin');
+                        location.href='systemI/admin.html';
                     }
                     else{
-                          $location.path('/SystemI/contentGuest');
+                        location.href='systemI/guest.html';
                     }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
     };
     javascript:void(0);
 })
-.controller('LoginCtrlJ', function($scope,Users,$location) {
+.controller('LoginCtrlJ', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -667,7 +667,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemJ.jpg";
-    $scope.systemname='System J';
+    $scope.systemname='基于个人基因组的健康规划系统';
     $scope.loginpath = "#!/SystemJ/login";
     $scope.signuppath ="#!/SystemJ/signup";
     $scope.systemsql="systemJ";
@@ -706,26 +706,26 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemJ/contentAdmin');
+                        location.href='systemJ/admin.html';
                     }
                     else{
-                          $location.path('/SystemJ/contentGuest');
+                        location.href='systemJ/guest.html';
                     }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
     };
     javascript:void(0);
 })
-.controller('LoginCtrlK', function($scope,Users,$location) {
+.controller('LoginCtrlK', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -734,7 +734,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemK.jpg";
-    $scope.systemname='System K';
+    $scope.systemname='个人基因组测序质量控制系统';
     $scope.loginpath = "#!/SystemK/login";
     $scope.signuppath ="#!/SystemK/signup";
     $scope.systemsql="systemK";
@@ -773,27 +773,27 @@ angular.module('myApp.login', ['ngRoute'])
                     console.log($scope.credentials);
                     alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemK/contentAdmin');
+                          location.href='systemK/admin.html';
                      }
                      else{
-                          $location.path('/SystemK/contentGuest');
+                          location.href='systemK/guest.html';
                      }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
     };
     javascript:void(0);
 })
 
-.controller('LoginCtrlL', function($scope,Users,$location) {
+.controller('LoginCtrlL', function($scope,Users) {
     $scope.credentials = {
         username: '',
         password: '',
@@ -802,7 +802,7 @@ angular.module('myApp.login', ['ngRoute'])
     $scope.msg="";
     $scope.errormsg="";
     $scope.path="pers/2tong/IMG/background_systemL.jpg";
-    $scope.systemname='System L';
+    $scope.systemname='个人基因组疾病风险预测系统';
     $scope.loginpath = "#!/SystemL/login";
     $scope.signuppath ="#!/SystemL/signup";
     $scope.systemsql="systemL";
@@ -839,23 +839,23 @@ angular.module('myApp.login', ['ngRoute'])
             if($scope.credentials.username == oneuser.email && $scope.credentials.category == oneuser.category && $scope.systemsql == oneuser.system){
                 if($scope.credentials.password == oneuser.password){
                     console.log($scope.credentials);
-                    alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
+                      alert("Welcome, "+$scope.credentials.category+" "+$scope.credentials.username+" !");
                     if($scope.credentials.category == "admin"){
-                        $location.path('/SystemL/contentAdmin');
+                        location.href='admin.html';
                      }
                      else{
-                          $location.path('/SystemL/contentGuest');
+                        location.href='systemL/guest.html';
                      }
                 }
                 else{
-                    $scope.errormsg = '#Password Wrong';
+                    $scope.errormsg = '#密码错误';
                 }
                 $scope.tag = 1;
                 break;
              }
          }
         if($scope.tag == 0){
-            $scope.errormsg = '#Email Wrong';
+            $scope.errormsg = '#邮箱尚未注册';
         }
     };
     javascript:void(0);
