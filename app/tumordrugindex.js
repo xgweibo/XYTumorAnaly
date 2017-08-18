@@ -156,5 +156,8 @@ workflowapp.config(['$routeProvider', function ($routeProvider) {
                 when('/XYDrugGeneList/:personname', {
                     templateUrl: 'pers/2tong/systemContentAdmin/templs/systemF/XYDrugGeneList.html'
                 }).
+                when('/XYTumordrugOrder', {
+                    templateUrl: 'pers/2tong/systemContentAdmin/templs/systemF/XYTumorDrugOrderList.html'
+                }).
                 otherwise({redirectTo: '/overview'});
     }]);

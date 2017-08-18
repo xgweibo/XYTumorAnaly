@@ -1,0 +1,53 @@
+<body>
+    <div class="overall">
+        <div class="header">
+            <a href="http://www.nebulagene.com" title="网站首页" class="fl"><img src="http://www.nebulagene.com/wp-content/themes/bit/img/logo.jpg" width="191" height="68" alt="星云Logo"></a>
+            <div class="general fl">
+                <h2>Tumor targeting drug guidance system</h2><hr>
+                <span> </span>
+
+            </div>
+        </div>
+
+        <div ng-controller="XYDrugOrderListCtrl as xydolc">
+            <hr>
+            <div>
+                <div class="form-group">
+                    <h3>
+                        Tumor Targeting Drug Guidance System History Orders
+                    </h3>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" ng-model="searchText" placeholder="Type here to filter History Order...">
+                    <hr>
+                </div>
+                <table id="Product_list" class="table table-hover"><!-- table-striped   -->
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Person Name</th>
+                            <th>Cancer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="oneorder in xydolc.allorder2s| filter:searchText" 
+                            ng-click="selectrow(oneorder, $index)"
+                            ng-class="{info: oneorder.orderid == idselected.orderid}">
+                            <td>
+                                {{ oneorder.orderid}}
+                            </td>
+                            <td>
+                                {{ oneorder.personname}}
+                            </td>
+                            <td>
+                                {{ oneorder.diseasename}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a ng-href="#/XYTumordrug" 
+                       class="btn btn-success" >Create New Orders</a>
+                <hr>
+            </div>
+        </div>
+</body>
