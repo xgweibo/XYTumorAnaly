@@ -92,7 +92,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -152,7 +152,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -212,7 +212,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -273,7 +273,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -334,7 +334,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -395,7 +395,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -456,7 +456,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -516,7 +516,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -577,7 +577,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -638,7 +638,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -699,7 +699,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");
@@ -760,7 +760,7 @@ angular.module('myApp.setup', ['ngRoute'])
                 $scope.errormsg='#两次输入密码不一致';
             }
             else{
-                sum=sum+1;
+                sum=$scope.allusers[sum-1].id+1;
                 $scope.temp = new Users({id:sum,email:$scope.userinfo.email,password:$scope.userinfo.password,category:$scope.userinfo.category,system:$scope.systemsql});
                 $scope.temp.$save();
                 var choose = confirm("Welcome, new "+$scope.userinfo.category+" : "+ $scope.userinfo.email+" !\n\ Would u want to log in now?");

@@ -1,9 +1,9 @@
 <div ng-controller="XYDrugGeneCreateCtrl as xydgc">
-    <h1>Create Drug Gene</h1>
+    <h1>Create Drug Gene Infomation</h1>
     
     <form id="XYPersonalGenomeCreateForm" name="XYPersonalGenomeCreateForm" class="form-horizontal" role="form"
           ng-submit="xydgc.createdrugGene()">
-        <legend class="sm-col-12">DrugGene Database Basic Information</legend>
+        <legend class="sm-col-12">DrugGene Basic Information</legend>
 
         <div class="form-group">
             <label id="la_tmplname" for="drugname" class="col-sm-4 control-label">Drug Name</label>
@@ -20,14 +20,14 @@
             </div>
         </div>
         <div class="form-group">
-            <label id="la_tmplname" for="tmplname" class="col-sm-4 control-label">Gene Name</label>
+            <label id="la_tmplname" for="tmplname" class="col-sm-4 control-label">Disease Name</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" name="diseasename" id="diseasename" placeholder=""
                        ng-model="xydgc.drugGene.diseasename">
             </div>
         </div>
         <div class="form-group">
-            <label id="la_description" for="description" class="col-sm-4 control-label">Source</label>
+            <label id="la_description" for="description" class="col-sm-4 control-label">May Treat</label>
 
             <div class="col-sm-8">
                 <input type="text" class="form-control" name="treat" id="treat" placeholder=""
@@ -35,7 +35,7 @@
             </div>
         </div>   
         <div class="form-group">
-            <label id="la_description" for="description" class="col-sm-4 control-label">Source</label>
+            <label id="la_description" for="description" class="col-sm-4 control-label">Adversere Actions</label>
 
             <div class="col-sm-8">
                 <input type="text" class="form-control" name="adversereactions" id="adversereactions" placeholder=""

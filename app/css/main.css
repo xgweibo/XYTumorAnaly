@@ -42,6 +42,94 @@ body {
 
 .product .price{font-size: 26px;color: #4fb1f7;}
 .product .detail .desc{margin-bottom: 45px;word-wrap:break-word;word-break:break-all;}
+body,html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .left{
+      float: left;
+      width: 30%;
+      height: 100%;
+    }
+    .right {
+      float: left;
+      width: 70%;
+      height: auto;
+    }
+    
+.overall {
+	width: 970px;
+	margin: 0 auto;
+	/*padding: 20px 0;*/
+	position: relative;
+}
+
+.header {
+	height: 70px;
+	margin: 5px 0 -10px 0;
+}
+
+.fl {
+	float: left;
+	display: inline;
+}
+
+.fr {
+	float: right;
+	display: inline;
+}
+.header .general {
+	color: #707070;
+	font-family:"微软雅黑",'microsoft yahei',Arial,sans-serif;
+	font-size: 14px;
+	display: inline-block;
+	border-left: 1px solid #dcdcdc;
+	padding-left: 10px;
+	height: 30px;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding-bottom: 4px;
+	padding-top: 6px;
+}
+.progress{  
+            width:800px;  
+            border:1px solid #ccc;  
+            height: 28px;  
+            text-align: right;  
+            line-height: 28px;  
+            font-weight: bold;  
+            color: #fff;  
+            overflow: hidden;  
+        }  
+        .Bar{  
+            width:50%;  
+            height: 28px;  
+/*            background: #5BC0DE;  */
+              
+        }  
+ 
+        .blue{  
+            background: #5BC0DE;  
+        }  
+  
+        .red{  
+            background: #D9534F;  
+        }  
+        .green{  
+            background: green;  
+        }
+        
+.div0{ 
+    margin:0 auto; 
+    width:600px; 
+    height:200px; 
+    
+} 
+        
+        
+      
+        
 
 
 
